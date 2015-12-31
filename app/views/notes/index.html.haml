@@ -1,0 +1,9 @@
+- if user_signed_in?
+	- @notes.each do |note|
+		= link_to note.text, note, class: 'ibl note' 
+- else
+	%h3 the simplest way to share reminders
+
+	%a{class: 'note ibl', href: nil} milk, eggs, bread
+	%a{class: 'note ibl', href: nil} buy a new cat
+	%a{class: 'note ibl', href: nil} asdf
